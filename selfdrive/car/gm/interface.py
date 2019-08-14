@@ -64,8 +64,8 @@ class CarInterface(object):
     tire_stiffness_factor = 0.444  # not optimized yet
 
     if candidate == CAR.VOLT:
-      # supports stop and go, but initial engage must be above 18mph (which include conservatism)
-      ret.minEnableSpeed = 18 * CV.MPH_TO_MS
+      # supports stop and go, but initial engage must be above 5mph
+      ret.minEnableSpeed = 5 * CV.MPH_TO_MS
       ret.mass = 1607. + STD_CARGO_KG
       ret.safetyModel = car.CarParams.SafetyModel.gm
       ret.wheelbase = 2.69
